@@ -1,0 +1,10 @@
+{
+  "name": "DalekJS-Hackathon",
+  "description": "Hacking around with DalekJS",
+  "version": "0.0.0",
+  "devDependencies": {
+    "dalek-browser-chrome": "0.0.10",
+    "dalek-reporter-html": "0.0.3",
+    "dalekjs": "0.0.8"
+  }
+}
