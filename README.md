@@ -1,5 +1,7 @@
 #DalekJS Hackathon
 
+*Bitte für eure Tests dieses Repository forken oder Branchen. Somit können wir unsere unsere Erkentnisse an einer Stelle sammeln.*
+
 ##Was ist DalekJS
 DalekJ ist im Prinzip eine Art »Fernsteuerung« für einen Browser mit der man
 
@@ -222,7 +224,7 @@ Per default landet der Test-Report im Terminal. Über [Plugins](http://dalekjs.c
 
 Nach der Installation lassen sich die Tests mit Parametern für verschiedene Reporter aufrufen. Z.B.:
 
-	dalek test/firstTests.js -r console,html
+	dalek tests/firstTests.js -r console,html
 
 ##Tipps
 
