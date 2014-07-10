@@ -207,6 +207,26 @@ Nachfolgend ein kleiner Auszug der subjektiv wichtigsten Methoden:
      .done();
 	```
 
+##Ein erster Test
+Lege eine JavaScript Datei im deinem Test-Verzeichnis an. Z.B.: `/test/firstTests.js` und füge beispielhaft folgenden Inhalt rein:
+
+```JavaScript
+module.exports = {
+	'Check Login status': function (test) {
+		test
+			.open(homepage)
+			.waitForElement('.header')
+			.assert.exists('.header-logged-out', 'User ist ausgeloggt')
+			.done();
+	}
+};
+```
+
+Diesen Test kannst du jetzt im Terminal ausführen in dem du im Root Verzeichnis deines Projektes folgendes eingibts:
+
+	dalek tests/firstTests.js
+
+Für weitere Beispiel Test kannst du dir die Datei `/test/firstTests.js` in diesem Repository ansehen.
 
 <a name="einsatz-mit-verschieden-Browsern"></a>
 ##Einsatz mit verschieden Browsern
