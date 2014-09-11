@@ -1,7 +1,11 @@
 {
-  "name": "DalekJS-Hackathon",
+  "name": "Simple-DalekJS-Demo",
   "description": "Hacking around with DalekJS",
   "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/mischah/dalek-article-demo.git"
+  },
   "devDependencies": {
     "dalek-browser-chrome": "0.0.10",
     "dalek-browser-firefox": "0.0.6",

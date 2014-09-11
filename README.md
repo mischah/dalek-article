@@ -1,3 +1,9 @@
-#Files zum DalekJS Artikel
+#Files zum DalekJS Artikel auf webkrauts.de
 
-Hier kommt der Link zum Artikel rein …
+##Was ist hier zu tun
+
+     npm install
+
+
+Weitere Infos im [Artikel](http://webkrauts.de/artikel/2014/cross-browser-testing-mit-dalekjs) ; ]
+
