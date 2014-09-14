@@ -1,8 +1,8 @@
 // Define variables to use withins test
 var homepage = 'https://github.com/',
 	credentials = {
-		userName: 'foo',
-		password: 'bar'
+		userName: 'yourUsername',
+		password: 'yourPassword'
 	},
 	searchTerm = 'Micromata',
 	companyName = 'Micromata GmbH';
