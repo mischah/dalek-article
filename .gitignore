@@ -3,6 +3,9 @@
 *.sublime-project
 sftp-config.json
 
+### Dalek Tests ###
+tests/screenshots
+
 ### Node ###
 # Logs
 logs
