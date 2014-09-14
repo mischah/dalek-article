@@ -4,8 +4,10 @@ var homepage = 'https://github.com/',
 		userName: 'yourUsername',
 		password: 'yourPassword'
 	},
-	searchTerm = 'Micromata',
-	companyName = 'Micromata GmbH';
+	search = {
+		searchTerm: 'Micromata',
+		companyName: 'Micromata GmbH'
+	};
 
 module.exports = {
 	'Check Login status': function (test) {
@@ -50,13 +52,22 @@ module.exports = {
 			.submit('#login form')
 			.waitForElement('body')
 			.assert.exists('.octicon-sign-out', 'User ist eingeloggt')
-			.type('#js-command-bar-field', searchTerm)
-			.waitForElement('[data-command="@micromata"]')
-			.assert.exists('[data-command="@micromata"]', 'Micromata als »Organisation« gefunden')
-			.click('[data-command="@micromata"]')
+
+			.type('.js-site-search-form input[type="text"]', 'user:' + search.searchTerm)
+			.submit('.js-site-search-form')
 			.waitForElement('body')
-			.assert.url('https://github.com/micromata', 'URL wie erwartet')
-			.assert.text('h1.org-name span', companyName, 'Firmenname ist korrekt')
+			.assert.exists('body', 'Suche ausgeführt')
+			.assert.exists('.main-content .sort-bar', 'Repositories von `' + search.searchTerm + '` gefunden')
+
+			.click('.search-menu-container .menu li:last-child a')
+			.waitForElement('#user_search_results')
+			.assert.exists('#user_search_results .user-list-item', 'User `' + search.searchTerm + '` gefunden')
+
+			.click('#user_search_results .user-list-item:first-child > a')
+			.waitForElement('body')
+			.assert.url('https://github.com/' + search.searchTerm.toLowerCase(), 'URL wie erwartet')
+			.assert.text('h1.org-name span', search.companyName, 'Firmenname ist korrekt')
+
 			.done();
 	}
 };
